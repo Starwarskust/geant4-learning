@@ -1,0 +1,17 @@
+﻿#include <G4VUserPrimaryGeneratorAction.hh>
+#include <G4ParticleGun.hh>
+
+#include <G4SystemOfUnits.hh>
+#include <G4Proton.hh>
+#include <G4Event.hh>
+
+class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
+{
+  public:
+    PrimaryGeneratorAction();
+    ~PrimaryGeneratorAction();
+    void GeneratePrimaries(G4Event* anEvent) override;
+
+  private:
+    G4ParticleGun* fParticleGun;
+};
