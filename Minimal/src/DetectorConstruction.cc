@@ -29,20 +29,20 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     0                 // copy number
   );
 
-  //---------------------------------------- Box ---------------------------------------------------
+  //--------------------------------------- Plate --------------------------------------------------
 
   G4double boxSizeXY = 0.9*m;
   G4double boxSizeZ  = 5.*cm;
-  G4Box* solidBox = new G4Box("Box", boxSizeXY/2., boxSizeXY/2., boxSizeZ/2.);
+  G4Box* solidPlate = new G4Box("Plate", boxSizeXY/2., boxSizeXY/2., boxSizeZ/2.);
 
-  G4Material* boxMat = nist->FindOrBuildMaterial("G4_Pb");
-  G4LogicalVolume* logicBox = new G4LogicalVolume(solidBox, boxMat, "Box");
+  G4Material* boxMat = nist->FindOrBuildMaterial("G4_Si");
+  G4LogicalVolume* logicPlate = new G4LogicalVolume(solidPlate, boxMat, "Plate");
 
-  G4VPhysicalVolume* physBox = new G4PVPlacement(
+  G4VPhysicalVolume* physPlate = new G4PVPlacement(
     0,                // no rotation
     G4ThreeVector(),  // at (0, 0, 0)
-    logicBox,         // logical volume
-    "Box",            // name
+    logicPlate,       // logical volume
+    "Plate",          // name
     logicWorld,       // mother volume
     false,            // no boolean operation
     0                 // copy number
