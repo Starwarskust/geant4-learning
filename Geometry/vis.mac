@@ -1,0 +1,10 @@
+# Create a ToolsSG view and draw geometry:
+/vis/open TSG
+/vis/drawVolume
+
+# Draw smooth trajectories at end of run:
+/vis/scene/add/trajectories smooth
+/vis/scene/endOfEventAction accumulate
+
+# Axes
+/vis/scene/add/axes
