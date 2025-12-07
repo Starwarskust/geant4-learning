@@ -20,11 +20,11 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   G4LogicalVolume* logicWorld = new G4LogicalVolume(solidWorld, worldMat, "World");
 
   G4VPhysicalVolume* physWorld = new G4PVPlacement(
-    0,                // no rotation
+    nullptr,          // no rotation
     G4ThreeVector(),  // at (0, 0, 0)
     logicWorld,       // logical volume
     "World",          // name
-    0,                // mother volume
+    nullptr,          // mother volume
     false,            // no boolean operation
     0                 // copy number
   );
@@ -39,7 +39,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   G4LogicalVolume* logicPlate = new G4LogicalVolume(solidPlate, boxMat, "Plate");
 
   G4VPhysicalVolume* physPlate = new G4PVPlacement(
-    0,                // no rotation
+    nullptr,          // no rotation
     G4ThreeVector(),  // at (0, 0, 0)
     logicPlate,       // logical volume
     "Plate",          // name

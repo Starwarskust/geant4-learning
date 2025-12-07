@@ -1,4 +1,5 @@
 #include <G4VUserActionInitialization.hh>
+
 #include "PrimaryGeneratorAction.hh"
 
 class ActionInitialization : public G4VUserActionInitialization

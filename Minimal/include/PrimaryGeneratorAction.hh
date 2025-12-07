@@ -3,7 +3,6 @@
 
 #include <G4SystemOfUnits.hh>
 #include <G4Proton.hh>
-#include <G4Event.hh>
 
 class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
